@@ -2,15 +2,35 @@
 
 # 📊 Statistical Learning Theory Deep Dive
 
-**"`train_loss`가 낮다고 모델이 좋다고 말하는 것과, `gen_gap`이 $O(\sqrt{(\text{VC}(\mathcal{H}) + \log(1/\delta))/n})$로 확률 $1-\delta$ 이상 유계임을 증명할 수 있는 것은 다르다"**
+### `train_loss` 가 낮다고 모델이 좋다고 말하는 것과,
+
+### Generalization gap 이
+
+$$\text{gen\_gap} \leq O\!\left(\sqrt{\frac{\text{VC}(\mathcal{H}) + \log(1/\delta)}{n}}\right)$$
+
+### 로 확률 $1 - \delta$ 이상 유계임을 **증명할 수 있는 것은 다르다.**
 
 <br/>
 
-> *"Hoeffding 부등식을 **인용하는 것**과, 왜 **고정된 한 분류기에는 Hoeffding을 쓰지만** 가설공간 전체에 대해서는 "모든 $h \in \mathcal{H}$"의 확률을 바운드하기 위해 **Union Bound + 성장함수 + Sauer-Shelah Lemma**가 필요한지 증명할 수 있는 것은 다르다.  
-> Rademacher 복잡도를 **정의하는 것**과, 왜 이것이 VC보다 **데이터 의존적이고 tighter한 경계**를 주는지, **Massart's lemma로 finite set의 경우를 유도**하는 것은 다르다."*
+> *Hoeffding 부등식을 **인용하는 것** 과, 왜 고정된 한 분류기에는 Hoeffding 을 쓰지만 가설공간 전체*
+>
+> $$\Pr\!\left[\sup_{h \in \mathcal{H}} \bigl|\hat R(h) - R(h)\bigr| > \epsilon\right]$$
+>
+> *를 바운드하려면 **Union Bound + 성장함수 + Sauer–Shelah Lemma** 가 필요한지 증명할 수 있는 것은 다르다.*
+>
+> *Rademacher 복잡도를 **정의하는 것** 과, 왜 이것이 VC 보다 **데이터 의존적이고 tighter 한 경계** 를 주는지 — **Massart's lemma** 로 finite set 의 경우를 유도하는 것은 다르다.*
 
-PAC learnability·VC 차원·Rademacher 복잡도·알고리즘 안정성·SRM까지  
-**"왜 학습이 가능한가 — 일반화의 수학적 증명"** 이라는 질문으로 ERM·SVM·Neural Net의 이론적 정당성을 끝까지 파헤칩니다
+<br/>
+
+**다루는 정리 (시간순)**
+
+Hoeffding 1963 *부등식* · Vapnik–Chervonenkis 1971 *VC 차원 + uniform convergence* · Sauer–Shelah 1972 *성장함수 다항식 bound* · Valiant 1984 *PAC learnability* · Vapnik 1995 *SRM* · Bartlett–Mendelson 2002 *Rademacher 복잡도* · Bousquet–Elisseeff 2002 *알고리즘 안정성* · Massart 2000 *finite class lemma* · McAllester 1999 *PAC-Bayes*
+
+<br/>
+
+**핵심 질문**
+
+> **왜 학습이 가능한가 — 일반화의 수학적 증명** — PAC learnability · VC 차원 · Rademacher 복잡도 · 알고리즘 안정성 · SRM 으로 ERM · SVM · Neural Net 의 이론적 정당성을 끝까지 파헤칩니다.
 
 <br/>
 
