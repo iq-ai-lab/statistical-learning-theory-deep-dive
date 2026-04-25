@@ -6,7 +6,7 @@
 
 ### Generalization gap 이
 
-$$\text{gen\_gap} \leq O\!\left(\sqrt{\frac{\text{VC}(\mathcal{H}) + \log(1/\delta)}{n}}\right)$$
+$$R(h) - \hat R(h) \;\leq\; O\!\left(\sqrt{\tfrac{\mathrm{VC}(\mathcal{H}) + \log(1/\delta)}{n}}\,\right)$$
 
 ### 로 확률 $1 - \delta$ 이상 유계임을 **증명할 수 있는 것은 다르다.**
 
@@ -14,7 +14,7 @@ $$\text{gen\_gap} \leq O\!\left(\sqrt{\frac{\text{VC}(\mathcal{H}) + \log(1/\del
 
 > *Hoeffding 부등식을 **인용하는 것** 과, 왜 고정된 한 분류기에는 Hoeffding 을 쓰지만 가설공간 전체*
 >
-> $$\Pr\!\left[\sup_{h \in \mathcal{H}} \bigl|\hat R(h) - R(h)\bigr| > \epsilon\right]$$
+> $$\Pr\!\left[\,\sup_{h \in \mathcal{H}} |\hat R(h) - R(h)| > \epsilon\,\right]$$
 >
 > *를 바운드하려면 **Union Bound + 성장함수 + Sauer–Shelah Lemma** 가 필요한지 증명할 수 있는 것은 다르다.*
 >
